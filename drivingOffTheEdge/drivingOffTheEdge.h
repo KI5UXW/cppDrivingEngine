@@ -63,16 +63,45 @@ class Car2D {
         void setYPos(unsigned int inputPos){
             yPos = long(double(inputPos));
         }
+        void setYPos(float inputPos){
+            yPos = long(double(inputPos));
+        }
 
         //X Velocity Setters and Overloading
         void setXVel(long double inputVel){
             xVel = inputVel;
         }
+        void setXVel(double inputVel){
+            xVel = long(inputVel);
+        }
+        void setXVel(float inputVel){
+            xVel = long(double(inputVel));
+        }
+        void setXVel(int inputVel){
+            xVel = long(double(inputVel));
+        }
+        void setXVel(unsigned int inputVel){
+            xVel = long(double(inputVel));
+        }
 
+        //Y Velocity Setters and Overloading
         void setYVel(long double inputVel){
             yVel = inputVel;
         }
+        void setYVel(double inputVel){
+            yVel = long(inputVel);
+        }
+        void setYVel(float inputVel){
+            yVel = long(double(inputVel));
+        }
+        void setYVel(int inputVel){
+            yVel = long(double(inputVel));
+        }
+        void setYVel(unsigned int inputVel){
+            yVel = long(double(inputVel));
+        }
 
+        //
         void setXAcc(long double inputAcc){
             xAcc = inputAcc;
         }
