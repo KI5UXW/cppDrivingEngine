@@ -7,9 +7,11 @@ class Car2D {
         long double yVel = 0;
         long double xAcc = 0;
         long double yAcc = 0;
-        double carMass = 0;
+        long double carMass = 0;
     public:
-        Car2D(long double xPos, long double yPos, long double xVel, long double yVel, long double xAcc, long double yAcc, double carMass): xPos(xPos), yPos(yPos), xVel(xVel), yVel(yVel), xAcc(xAcc), yAcc(yAcc), carMass(carMass){}
+        //Constructors
+        Car2D(long double xPos, long double yPos, long double xVel, long double yVel, long double xAcc, long double yAcc, long double carMass): xPos(xPos), yPos(yPos), xVel(xVel), yVel(yVel), xAcc(xAcc), yAcc(yAcc), carMass(carMass){}
+        Car2D(){}
         //Getters
         double getCarMass(){
             return carMass;
@@ -100,12 +102,31 @@ class Car2D {
         void setYVel(unsigned int inputVel){
             yVel = long(double(inputVel));
         }
+        void setYVel(short inputVel){
+            yVel = long(double(inputVel));
+        }
 
-        //
+        //X Acceleration Setters and Overloading
         void setXAcc(long double inputAcc){
             xAcc = inputAcc;
         }
+        void setXAcc(double inputAcc){
+            xAcc = long(inputAcc);
+        }
+        void setXAcc(float inputAcc){
+            xAcc = long(float(inputAcc));
+        }
+        void setXAcc(int inputAcc){
+            xAcc = long(float(inputAcc));
+        }
+        void setXAcc(unsigned int inputAcc){
+            xAcc = long(float(inputAcc));
+        }
+         void setXAcc(short inputAcc){
+            xAcc = long(float(inputAcc));
+        }
 
+        //Y Acceleration Setters and Overloading
         void setYAcc(long double inputAcc){
             yAcc = inputAcc;
         }
